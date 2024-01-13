@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Books">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Author" Type="nvarchar" MaxLength="30" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="30" />
+          <Property Name="DateAdded" Type="nvarchar" MaxLength="200" />
+          <Property Name="BookQuantity" Type="int" />
+        </EntityType>
+        <EntityType Name="BorrowBook">
+          <Key>
+            <PropertyRef Name="Borrow_ID" />
+          </Key>
+          <Property Name="Borrow_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Course" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateIssue" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateReturned" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Login_new">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentNumber" Type="varchar" MaxLength="255" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="Date Added" Type="varchar" MaxLength="50" />
+          <Property Name="CourseId" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Table_1">
+          <Key>
+            <PropertyRef Name="Admin" />
+            <PropertyRef Name="admin123" />
+          </Key>
+          <Property Name="Admin" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="admin123" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Function Name="SP_add_books" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BookName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Author" Type="nvarchar" Mode="In" />
+          <Parameter Name="Genre" Type="nvarchar" Mode="In" />
+          <Parameter Name="DateAdded" Type="nvarchar" Mode="In" />
+          <Parameter Name="BookQuantity" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="ViewBooks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BookName" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="LibraryModelStoreContainer">
+          <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BorrowBook" EntityType="Self.BorrowBook" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login_new" EntityType="Self.Login_new" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LibraryEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="SP_add_books">
+            <Parameter Name="BookName" Mode="In" Type="String" />
+            <Parameter Name="Author" Mode="In" Type="String" />
+            <Parameter Name="Genre" Mode="In" Type="String" />
+            <Parameter Name="DateAdded" Mode="In" Type="String" />
+            <Parameter Name="BookQuantity" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ViewBooks" ReturnType="Collection(LibraryModel.ViewBooks_Result)">
+          <Parameter Name="BookName" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Books" EntityType="LibraryModel.Book" />
+          <EntitySet Name="BorrowBooks" EntityType="LibraryModel.BorrowBook" />
+          <EntitySet Name="Login_new" EntityType="LibraryModel.Login_new" />
+          <EntitySet Name="Students" EntityType="LibraryModel.Student" />
+          <EntitySet Name="Table_1" EntityType="LibraryModel.Table_1" />
+        </EntityContainer>
+        <ComplexType Name="ViewBooks_Result">
+          <Property Type="Int32" Name="BookId" Nullable="false" />
+          <Property Type="String" Name="BookName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Genre" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DateAdded" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="BookQuantity" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Genre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DateAdded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BookQuantity" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BorrowBook">
+          <Key>
+            <PropertyRef Name="Borrow_ID" />
+          </Key>
+          <Property Name="Borrow_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Course" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BookName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateIssue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateReturned" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Login_new">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Added" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CourseId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table_1">
+          <Key>
+            <PropertyRef Name="Admin" />
+            <PropertyRef Name="admin123" />
+          </Key>
+          <Property Name="Admin" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="admin123" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LibraryModelStoreContainer" CdmEntityContainer="LibraryEntities">
+          <FunctionImportMapping FunctionImportName="SP_add_books" FunctionName="LibraryModel.Store.SP_add_books" />
+          <FunctionImportMapping FunctionImportName="ViewBooks" FunctionName="LibraryModel.Store.ViewBooks">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LibraryModel.ViewBooks_Result">
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+                <ScalarProperty Name="BookQuantity" ColumnName="BookQuantity" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="LibraryModel.Book">
+              <MappingFragment StoreEntitySet="Books">
+                <ScalarProperty Name="BookQuantity" ColumnName="BookQuantity" />
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BorrowBooks">
+            <EntityTypeMapping TypeName="LibraryModel.BorrowBook">
+              <MappingFragment StoreEntitySet="BorrowBook">
+                <ScalarProperty Name="DateReturned" ColumnName="DateReturned" />
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="StudentNumber" ColumnName="StudentNumber" />
+                <ScalarProperty Name="Borrow_ID" ColumnName="Borrow_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login_new">
+            <EntityTypeMapping TypeName="LibraryModel.Login_new">
+              <MappingFragment StoreEntitySet="Login_new">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="LibraryModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="Date_Added" ColumnName="Date Added" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="StudentNumber" ColumnName="StudentNumber" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_1">
+            <EntityTypeMapping TypeName="LibraryModel.Table_1">
+              <MappingFragment StoreEntitySet="Table_1">
+                <ScalarProperty Name="admin123" ColumnName="admin123" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

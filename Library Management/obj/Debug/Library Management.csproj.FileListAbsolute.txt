@@ -1,0 +1,54 @@
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\Library Management.exe.config
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\Library Management.exe
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\Library Management.pdb
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library Management.csprojAssemblyReference.cache
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.Form1.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.Menuform.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.Properties.Resources.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library Management.csproj.GenerateResource.cache
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library Management.csproj.CoreCompileInputs.cache
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library Management.exe
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library Management.pdb
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.AddBooks.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.AddStudents.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.ViewBooks.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.BorrowBooks.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.BorrowedRecords.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.ViewStudents.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\EntityFramework.dll
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\Model.dll
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\Model.pdb
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\Model.dll.config
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\EntityFramework.xml
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library Management.csproj.CopyComplete
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.ReturnBooks.resources
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.ReturnRecords.resources
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\Library Management.exe.config
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\Library Management.exe
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\Library Management.pdb
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.dll
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.SqlServer.dll
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\Model.dll
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\Model.pdb
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\Model.dll.config
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.xml
+D:\Library\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.SqlServer.xml
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.csprojAssemblyReference.cache
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.AddBooks.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.AddStudents.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.Form1.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.BorrowBooks.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.BorrowedRecords.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.Menuform.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.Properties.Resources.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.ReturnBooks.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.ReturnRecords.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.ViewBooks.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library_Management.ViewStudents.resources
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.csproj.GenerateResource.cache
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.csproj.CoreCompileInputs.cache
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.csproj.CopyComplete
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.exe
+D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.pdb
