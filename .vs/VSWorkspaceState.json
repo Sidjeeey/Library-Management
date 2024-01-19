@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LibraryManagement"
+    "\\Library Management",
+    "\\Library Management\\dbo",
+    "\\Library Management\\Resources"
   ],
-  "SelectedNode": "\\LibraryManagement\\AddStudents.Designer.cs",
+  "SelectedNode": "\\Library Management.sln",
   "PreviewInSolutionExplorer": false
 }

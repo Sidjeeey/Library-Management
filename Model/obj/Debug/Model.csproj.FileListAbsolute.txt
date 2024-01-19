@@ -5,8 +5,8 @@ D:\Users\cj.junio\Documents\Workspace\Library Management\Model\bin\Debug\EntityF
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\bin\Debug\EntityFramework.xml
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\bin\Debug\EntityFramework.SqlServer.xml
-D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.csprojAssemblyReference.cache
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.csproj.CopyComplete
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.dll
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.pdb
+D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.csproj.AssemblyReference.cache
