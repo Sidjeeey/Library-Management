@@ -159,6 +159,19 @@
       <DependentUpon>ViewStudents.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AddBooks.datasource" />
+    <None Include="Properties\DataSources\AddStudents.datasource" />
+    <None Include="Properties\DataSources\BorrowBooks.datasource" />
+    <None Include="Properties\DataSources\BorrowedRecords.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Library_Management.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Library_Management.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Menuform.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\ReturnBooks.datasource" />
+    <None Include="Properties\DataSources\ReturnRecords.datasource" />
+    <None Include="Properties\DataSources\ViewBooks.datasource" />
+    <None Include="Properties\DataSources\ViewStudents.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
