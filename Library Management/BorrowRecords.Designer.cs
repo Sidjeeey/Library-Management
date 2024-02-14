@@ -61,6 +61,7 @@
             this.ClientSize = new System.Drawing.Size(1072, 685);
             this.Controls.Add(this.panel1);
             this.Name = "BorrowedRecords";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BorrowedRecords";
             this.Load += new System.EventHandler(this.BorrowedRecords_Load);
             this.panel1.ResumeLayout(false);

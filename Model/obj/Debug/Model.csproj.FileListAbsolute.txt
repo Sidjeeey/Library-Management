@@ -9,4 +9,4 @@ D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.c
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.csproj.CopyComplete
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.dll
 D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.pdb
-D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\Users\cj.junio\Documents\Workspace\Library Management\Model\obj\Debug\Model.csprojAssemblyReference.cache

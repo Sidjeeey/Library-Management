@@ -166,6 +166,7 @@
             this.Controls.Add(this.ViewBooks);
             this.Controls.Add(this.AddBooks);
             this.Name = "Menuform";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menuform";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

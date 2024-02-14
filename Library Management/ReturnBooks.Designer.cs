@@ -147,6 +147,7 @@
             this.Controls.Add(this.Returnbbt);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "ReturnBooks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReturnBooks";
             this.Load += new System.EventHandler(this.ReturnBooks_Load);
             this.panel1.ResumeLayout(false);

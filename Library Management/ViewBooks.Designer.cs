@@ -100,6 +100,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewBooks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewBooks";
             this.Load += new System.EventHandler(this.ViewBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

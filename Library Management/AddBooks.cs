@@ -59,22 +59,6 @@ namespace Library_Management
         } 
         private void button1_Click(object sender, EventArgs e)
         {
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("SP_add_books", con);
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.Add("@BookName", SqlDbType.NVarChar).Value = textBox1.Text;
-            //cmd.Parameters.Add("@Author", SqlDbType.NVarChar).Value = textBox2.Text;
-            //cmd.Parameters.Add("@Genre", SqlDbType.NVarChar).Value = textBox3.Text;
-            //cmd.Parameters.Add("@DateAdded", SqlDbType.NVarChar).Value = dateTimePicker1.Value;
-            //cmd.Parameters.Add("@BookQuantity", SqlDbType.NVarChar).Value = textBox5.Text;
-            //cmd.ExecuteNonQuery();
-            //textBox1.Clear();
-            //textBox2.Clear();
-            //textBox3.Clear();
-            //textBox5.Clear();
-            //InsertBooks();
-            //MessageBox.Show("Book Added Succesfully");
-            //con.Close();
             InsertBooks();
         }
     }
