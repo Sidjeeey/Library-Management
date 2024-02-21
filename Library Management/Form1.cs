@@ -21,7 +21,7 @@ namespace Library_Management
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.AcceptButton = button_login;
+            //this.AcceptButton = button_login;
         }
 
         private void button_login_Click(object sender, EventArgs e)

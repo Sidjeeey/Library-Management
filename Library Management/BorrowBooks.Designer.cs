@@ -267,6 +267,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BorrowBooks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BorrowBooks";
             this.Load += new System.EventHandler(this.BorrowBooks_Load);
             this.panel1.ResumeLayout(false);

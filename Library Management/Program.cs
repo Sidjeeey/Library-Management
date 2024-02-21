@@ -18,8 +18,9 @@ namespace Library_Management
             //BookGenreSeeder.AddGenres();
             //Application.enablevisualstyles();
             //Application.setcompatibletextrenderingdefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
             //Application.Run(new Menuform());
+            Application.Run(new SplashScreen());
         }
     }
 }

@@ -23,9 +23,15 @@ namespace Library_Management
 
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void Searchstudent_Click(object sender, EventArgs e)
         {
             string searchQuery = SearchStudentTextBox.Text.Trim();
+
+            if (searchQuery.Length < 4)
+            {
+                MessageBox.Show("Invalid Student Number");
+                return;
+            }
 
             using (var dbContext = new LibraryEntities())
             {

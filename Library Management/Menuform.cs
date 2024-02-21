@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,8 @@ namespace Library_Management
 {
     public partial class Menuform : Form
     {
+        
+
         public Menuform()
         {
             InitializeComponent();
@@ -21,6 +24,7 @@ namespace Library_Management
         {
             AddBooks Ab = new AddBooks();
             Ab.ShowDialog();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -33,8 +37,6 @@ namespace Library_Management
         {
             AddStudents As = new AddStudents();
             As.ShowDialog();
-            
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -66,6 +68,36 @@ namespace Library_Management
         {
             ReturnRecords Rr = new ReturnRecords();
             Rr.ShowDialog();
+        }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+            (
+                int nLeft,
+                int nTop,
+                int nRight,
+                int nBottom,
+                int nWidthEllipse,
+                int nHeightEllipse
+            );
+
+        private void Menuform_Load(object sender, EventArgs e)
+        {
+            int borderRadius = 30; // Radius for rounded corners
+
+            SetControlRegion(AddBooks, borderRadius);
+            SetControlRegion(ViewBooks, borderRadius);
+            SetControlRegion(AddStudent, borderRadius);
+            SetControlRegion(ViewStudents, borderRadius);
+            SetControlRegion(BorrowBooks, borderRadius);
+            SetControlRegion(ReturnBooks, borderRadius);
+            SetControlRegion(BorrowedRecords, borderRadius);
+            SetControlRegion(ReturnRecords, borderRadius);
+        }
+
+        private void SetControlRegion(Control control, int borderRadius)
+        {
+            control.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, control.Width, control.Height, borderRadius, borderRadius));
         }
     }
 }

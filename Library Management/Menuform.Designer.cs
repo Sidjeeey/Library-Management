@@ -43,90 +43,114 @@
             // 
             // AddBooks
             // 
+            this.AddBooks.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.AddBooks.FlatAppearance.BorderSize = 0;
+            this.AddBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBooks.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBooks.Location = new System.Drawing.Point(588, 196);
             this.AddBooks.Name = "AddBooks";
             this.AddBooks.Size = new System.Drawing.Size(129, 43);
             this.AddBooks.TabIndex = 1;
             this.AddBooks.Text = "Add Books";
-            this.AddBooks.UseVisualStyleBackColor = true;
+            this.AddBooks.UseVisualStyleBackColor = false;
             this.AddBooks.Click += new System.EventHandler(this.button1_Click);
             // 
             // ViewBooks
             // 
+            this.ViewBooks.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ViewBooks.FlatAppearance.BorderSize = 0;
+            this.ViewBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewBooks.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewBooks.Location = new System.Drawing.Point(588, 256);
+            this.ViewBooks.Location = new System.Drawing.Point(588, 258);
             this.ViewBooks.Name = "ViewBooks";
             this.ViewBooks.Size = new System.Drawing.Size(129, 43);
             this.ViewBooks.TabIndex = 2;
             this.ViewBooks.Text = "View Books";
-            this.ViewBooks.UseVisualStyleBackColor = true;
+            this.ViewBooks.UseVisualStyleBackColor = false;
             this.ViewBooks.Click += new System.EventHandler(this.button2_Click);
             // 
             // AddStudent
             // 
+            this.AddStudent.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.AddStudent.FlatAppearance.BorderSize = 0;
+            this.AddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddStudent.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStudent.Location = new System.Drawing.Point(588, 319);
+            this.AddStudent.Location = new System.Drawing.Point(588, 323);
             this.AddStudent.Name = "AddStudent";
             this.AddStudent.Size = new System.Drawing.Size(129, 43);
             this.AddStudent.TabIndex = 3;
             this.AddStudent.Text = "Add Students";
-            this.AddStudent.UseVisualStyleBackColor = true;
+            this.AddStudent.UseVisualStyleBackColor = false;
             this.AddStudent.Click += new System.EventHandler(this.button3_Click);
             // 
             // ViewStudents
             // 
+            this.ViewStudents.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ViewStudents.FlatAppearance.BorderSize = 0;
+            this.ViewStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewStudents.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewStudents.Location = new System.Drawing.Point(588, 382);
+            this.ViewStudents.Location = new System.Drawing.Point(588, 388);
             this.ViewStudents.Name = "ViewStudents";
             this.ViewStudents.Size = new System.Drawing.Size(129, 43);
             this.ViewStudents.TabIndex = 4;
             this.ViewStudents.Text = "View Students";
-            this.ViewStudents.UseVisualStyleBackColor = true;
+            this.ViewStudents.UseVisualStyleBackColor = false;
             this.ViewStudents.Click += new System.EventHandler(this.button4_Click);
             // 
             // BorrowBooks
             // 
+            this.BorrowBooks.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.BorrowBooks.FlatAppearance.BorderSize = 0;
+            this.BorrowBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BorrowBooks.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BorrowBooks.Location = new System.Drawing.Point(588, 445);
+            this.BorrowBooks.Location = new System.Drawing.Point(588, 453);
             this.BorrowBooks.Name = "BorrowBooks";
             this.BorrowBooks.Size = new System.Drawing.Size(129, 43);
             this.BorrowBooks.TabIndex = 5;
             this.BorrowBooks.Text = "Borrow Books";
-            this.BorrowBooks.UseVisualStyleBackColor = true;
+            this.BorrowBooks.UseVisualStyleBackColor = false;
             this.BorrowBooks.Click += new System.EventHandler(this.button5_Click);
             // 
             // ReturnBooks
             // 
+            this.ReturnBooks.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ReturnBooks.FlatAppearance.BorderSize = 0;
+            this.ReturnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReturnBooks.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnBooks.Location = new System.Drawing.Point(588, 504);
+            this.ReturnBooks.Location = new System.Drawing.Point(588, 514);
             this.ReturnBooks.Name = "ReturnBooks";
             this.ReturnBooks.Size = new System.Drawing.Size(129, 43);
             this.ReturnBooks.TabIndex = 6;
             this.ReturnBooks.Text = "Return Books";
-            this.ReturnBooks.UseVisualStyleBackColor = true;
+            this.ReturnBooks.UseVisualStyleBackColor = false;
             this.ReturnBooks.Click += new System.EventHandler(this.button6_Click);
             // 
             // BorrowedRecords
             // 
+            this.BorrowedRecords.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.BorrowedRecords.FlatAppearance.BorderSize = 0;
+            this.BorrowedRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BorrowedRecords.Font = new System.Drawing.Font("Myriad Pro Cond", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BorrowedRecords.Location = new System.Drawing.Point(588, 564);
+            this.BorrowedRecords.Location = new System.Drawing.Point(588, 576);
             this.BorrowedRecords.Name = "BorrowedRecords";
             this.BorrowedRecords.Size = new System.Drawing.Size(129, 43);
             this.BorrowedRecords.TabIndex = 7;
             this.BorrowedRecords.Text = "Borrowed Records";
-            this.BorrowedRecords.UseVisualStyleBackColor = true;
+            this.BorrowedRecords.UseVisualStyleBackColor = false;
             this.BorrowedRecords.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // ReturnRecords
             // 
+            this.ReturnRecords.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ReturnRecords.FlatAppearance.BorderSize = 0;
+            this.ReturnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReturnRecords.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnRecords.Location = new System.Drawing.Point(588, 625);
+            this.ReturnRecords.Location = new System.Drawing.Point(588, 639);
             this.ReturnRecords.Name = "ReturnRecords";
             this.ReturnRecords.Size = new System.Drawing.Size(129, 43);
             this.ReturnRecords.TabIndex = 8;
             this.ReturnRecords.Text = "Return Records";
-            this.ReturnRecords.UseVisualStyleBackColor = true;
+            this.ReturnRecords.UseVisualStyleBackColor = false;
             this.ReturnRecords.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel1
@@ -136,7 +160,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1330, 138);
+            this.panel1.Size = new System.Drawing.Size(1330, 131);
             this.panel1.TabIndex = 9;
             // 
             // label1
@@ -168,6 +192,7 @@
             this.Name = "Menuform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menuform";
+            this.Load += new System.EventHandler(this.Menuform_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

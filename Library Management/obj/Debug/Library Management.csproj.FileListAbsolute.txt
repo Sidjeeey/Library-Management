@@ -52,3 +52,4 @@ D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.cspr
 D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.csproj.CopyComplete
 D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.exe
 D:\Library\LibraryManagement\LibraryManagement\obj\Debug\Library Management.pdb
+D:\Users\cj.junio\Documents\Workspace\Library Management\Library Management\obj\Debug\Library_Management.SplashScreen.resources

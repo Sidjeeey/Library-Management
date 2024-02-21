@@ -20,43 +20,50 @@ namespace Library_Management
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void InsertBooks()
         {
             try
             {
-                var books = new Book
-                {
-                    BookName = textBox1.Text,
-                    Author = textBox2.Text,
-                    Genre = textBox3.Text,
-                    DateAdded = dateTimePicker1.Text,
-                    BookQuantity = int.Parse(textBox5.Text)
-                };
                 using (var context = new LibraryEntities())
                 {
-                    context.Books.Add(books);
+                    // Check if the book already exists in the database
+                    var existingBook = context.Books.FirstOrDefault(book => book.BookName == textBox1.Text);
+
+                    if (existingBook != null)
+                    {
+                        // If the book exists, update its quantity
+                        existingBook.BookQuantity += int.Parse(textBox5.Text);
+                    }
+                    else
+                    {
+                        // If the book doesn't exist, create a new entry
+                        var newBook = new Book
+                        {
+                            BookName = textBox1.Text,
+                            Author = textBox2.Text,
+                            Genre = textBox3.Text,
+                            DateAdded = dateTimePicker1.Text,
+                            BookQuantity = int.Parse(textBox5.Text)
+                        };
+
+                        context.Books.Add(newBook);
+                    }
+
                     context.SaveChanges();
-                            
                 }
-                MessageBox.Show("Book Added Succesfully");
+
+                MessageBox.Show("Book(s) Added Successfully");
 
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
                 textBox5.Clear();
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
-            
-        } 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             InsertBooks();

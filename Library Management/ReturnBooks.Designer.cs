@@ -101,7 +101,7 @@
             this.Searchstudent.TabIndex = 2;
             this.Searchstudent.Text = "Search";
             this.Searchstudent.UseVisualStyleBackColor = true;
-            this.Searchstudent.Click += new System.EventHandler(this.Button2_Click);
+            this.Searchstudent.Click += new System.EventHandler(this.Searchstudent_Click);
             // 
             // Returnbbt
             // 

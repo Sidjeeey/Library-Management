@@ -23,37 +23,11 @@ namespace Library_Management
          * Begin
          *      Get quantity of selected books
          *          If quantity is equal to zero
-         *              Return
          *          Else
-         *              Subtract quantity
+         *              Book is out of stock
+         *              return
          * End
          * */
-
-        private void UpdateBookQuantity(string bookName, int quantityChange)
-        {
-            try
-            {
-                using (var dbContext = new LibraryEntities())
-                {
-                    Book selectedBook = dbContext.Books.FirstOrDefault(book => book.BookName == bookName);
-
-                    if (selectedBook != null)
-                    {
-                        selectedBook.BookQuantity += quantityChange;
-                        dbContext.SaveChanges();
-                    } 
-
-                    else
-                    {
-                        MessageBox.Show("Book not found.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
-            }
-        }
 
         private void BorrowBooks_Load(object sender, EventArgs e)
         {
@@ -96,7 +70,18 @@ namespace Library_Management
 
         private void SearchStudentbutton_Click(object sender, EventArgs e)
         {
+            Search();
+        }
+
+        private void Search()
+        {
             string searchQuery = SearchStudentTextBox.Text.Trim();
+
+            if (searchQuery.Length < 4)
+            {
+                MessageBox.Show("Invalid Student Number");
+                return;
+            }
 
             using (var dbContext = new LibraryEntities())
             {
@@ -117,11 +102,17 @@ namespace Library_Management
                     textBox2.Text = string.Empty;
                     textBox3.Text = string.Empty;
                     textBox5.Text = string.Empty;
+                    MessageBox.Show("No student found.");
                 }
             }
         }
 
         private void Issuebutton_Click(object sender, EventArgs e)
+        {
+            IssuedBook();
+            
+        }
+        private void IssuedBook()
         {
             try
             {
@@ -133,8 +124,22 @@ namespace Library_Management
 
                 string selectedBookName = BookNameComboBox.SelectedItem.ToString();
 
+                // Check if the book is out of stock
+                using (var dbContext = new LibraryEntities())
+                {
+                    Book selectedBook = dbContext.Books.FirstOrDefault(book => book.BookName == selectedBookName);
 
+                    if (selectedBook != null && selectedBook.BookQuantity <= 0)
+                    {
+                        MessageBox.Show("This book is out of stock.");
+                        return;
+                    }
+                }
+
+                // Update book quantity
                 UpdateBookQuantity(selectedBookName, -1);
+
+                // Issue the book
                 using (var dbContext = new LibraryEntities())
                 {
                     BorrowBook issuedBook = new BorrowBook
@@ -157,15 +162,48 @@ namespace Library_Management
                     textBox5.Clear();
                     SearchStudentTextBox.Clear();
                     MessageBox.Show("Book issued successfully.");
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
-                
             }
+        }
 
+        private void UpdateBookQuantity(string bookName, int quantityChange)
+        {
+            try
+            {
+                using (var dbContext = new LibraryEntities())
+                {
+                    Book selectedBook = dbContext.Books.FirstOrDefault(book => book.BookName == bookName);
+
+                    if (selectedBook != null)
+                    {
+                        selectedBook.BookQuantity += quantityChange;
+
+                        if (selectedBook.BookQuantity < 0)
+                        {
+                            MessageBox.Show("Invalid operation. Book quantity cannot be negative.");
+                            return;
+                        }
+                        else if (selectedBook.BookQuantity == 0)
+                        {
+                            MessageBox.Show("This book is now out of stock.");
+                        }
+
+                        dbContext.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Book not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
     }
 }
